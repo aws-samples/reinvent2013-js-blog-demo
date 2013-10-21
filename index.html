@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+Copyright 2012-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License"). You
+may not use this file except in compliance with the License. A copy of
+the License is located at
+
+    http://aws.amazon.com/apache2.0/
+
+or in the "license" file accompanying this file. This file is
+distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific
+language governing permissions and limitations under the License.
+-->
+<html>
+<head>
+  <title>AWS SDK for JavaScript - Console</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+  <div id="fb-root"></div>
+  <nav>
+    <a id="new-post-button" class="admin-button" href="#">+ Post</a>
+    <a id="login-button" href="#">Login</a>
+  </nav>
+  <div id="content">
+    <h1>re:Invent 2013 Blog Demo</h1>
+
+    <div id="article-editor">
+      <h2>Create a New Article</h2>
+      <p>
+        <input id="article-asset" type="file" />
+        <input id="article-date" type="hidden" value="" />
+        Title: <input id="article-title" type="text" size="100" />
+        <button id="cancel-publish-button">Cancel</button>
+        <button id="publish-button">Publish</button>
+      </p>
+      <div class="wmd-panel">
+          <div id="wmd-button-bar"></div>
+          <textarea class="wmd-input" id="wmd-input"></textarea>
+      </div>
+      <div id="wmd-preview" class="wmd-panel wmd-preview"></div>
+    </div>
+
+    <div id="articles">Loading articles...</div>
+  </div>
+
+  <script id="article-template" type="text/template">
+    <article id="{{slug}}">
+      <header>
+        <a href="#" class="admin-button delete-button">Delete</a>
+        <a href="#" class="admin-button edit-button">Edit</a>
+        <h2 class="title">{{title}}</h1>
+        <h3 class="publishDate">Published on {{publishDate}}</h2>
+      </header>
+      <section class="body">{{body}}</section>
+    </article>
+  </script>
+  <script type="text/javascript" src="js/Markdown.Converter.js"></script>
+  <script type="text/javascript" src="js/Markdown.Sanitizer.js"></script>
+  <script type="text/javascript" src="js/Markdown.Editor.js"></script>
+  <script type="text/javascript" src="js/aws-sdk.min.js"></script>
+  <script type="text/javascript" src="js/appinfo.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

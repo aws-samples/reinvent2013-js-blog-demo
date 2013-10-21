@@ -1,0 +1,20 @@
+appInfo = {
+  admin: {
+    appId: 'APP_ID',
+    providerId: 'PROVIDER_ID',
+    roleArn: 'ROLE_ARN'
+  },
+  db: {
+    region: 'DB_REGION',
+    tableName: 'DB_TABLE',
+    readCredentials: {
+      accessKeyId: 'PUBLIC_SCOPED_CREDENTIALS_AKID',
+      secretAccessKey: 'PUBLIC_SCOPED_CREDENTIALS_SECRET'
+    }
+  },
+  s3: {
+    region: 'ASSETS_S3_REGION',
+    bucket: 'ASSETS_S3_BUCKET',
+    prefix: 'ASSETS_S3_PREFIX'
+  }
+};
