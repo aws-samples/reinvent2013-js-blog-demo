@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<!--
-Copyright 2012-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
-Licensed under the Apache License, Version 2.0 (the "License"). You
-may not use this file except in compliance with the License. A copy of
-the License is located at
-
-    http://aws.amazon.com/apache2.0/
-
-or in the "license" file accompanying this file. This file is
-distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
-ANY KIND, either express or implied. See the License for the specific
-language governing permissions and limitations under the License.
--->
 <html>
 <head>
-  <title>AWS SDK for JavaScript - Console</title>
+  <title>AWS SDK for JavaScript Blog</title>
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
@@ -27,6 +12,7 @@ language governing permissions and limitations under the License.
   <div id="content">
     <h1>re:Invent 2013 Blog Demo</h1>
 
+    <!-- Article editor markup -->
     <div id="article-editor">
       <h2>Create a New Article</h2>
       <p>
@@ -43,9 +29,11 @@ language governing permissions and limitations under the License.
       <div id="wmd-preview" class="wmd-panel wmd-preview"></div>
     </div>
 
+    <!-- Placeholder markup for articles -->
     <div id="articles">Loading articles...</div>
   </div>
 
+  <!-- HTML template for displaying an individual article -->
   <script id="article-template" type="text/template">
     <article id="{{slug}}">
       <header>
@@ -57,10 +45,16 @@ language governing permissions and limitations under the License.
       <section class="body">{{body}}</section>
     </article>
   </script>
+
+  <!-- Markdown editor scripts -->
   <script type="text/javascript" src="js/Markdown.Converter.js"></script>
   <script type="text/javascript" src="js/Markdown.Sanitizer.js"></script>
   <script type="text/javascript" src="js/Markdown.Editor.js"></script>
-  <script type="text/javascript" src="js/aws-sdk.min.js"></script>
+
+  <!-- Load the SDK -->
+  <script type="text/javascript" src="https://sdk.amazonaws.com/js/aws-sdk-2.0.0-rc1.min.js"></script>
+
+  <!-- Load our application -->
   <script type="text/javascript" src="js/appinfo.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
 </body>

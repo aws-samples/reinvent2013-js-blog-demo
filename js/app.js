@@ -66,7 +66,8 @@
       var params = {
         Key: appInfo.s3.prefix + guid() + ext,
         ContentType: file.type,
-        Body: file
+        Body: file,
+        ACL: 'public-read'
       };
 
       s3Bucket.putObject(params, function (err, data) {
@@ -74,7 +75,7 @@
           console.log("Error uploading asset to S3", err.message);
         } else {
           var url = '//' + appInfo.s3.bucket + '.s3.amazonaws.com/' + params.Key;
-          articleBody.value += '![](' + url + ')';
+          articleBody.value += '\n\n![](' + url + ')\n\n';
         }
       });
     }
@@ -88,7 +89,7 @@
         publishDate: {N: articleDate.value || new Date().getTime().toString()},
         title: {S: articleTitle.value},
         body: {S: articleBody.value},
-        permalink: {S: slug}
+        slug: {S: slug}
       }
     };
 
@@ -119,7 +120,7 @@
   }
 
   function cacheArticle(item) {
-    var slug = item.permalink.S;
+    var slug = item.slug.S;
     var timestamp = parseInt(item.publishDate.N);
     articleOrder[slug] = slug;
     articleData[slug] = {

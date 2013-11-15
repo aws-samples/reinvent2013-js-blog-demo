@@ -1,0 +1,6 @@
+#!/bin/sh
+BUCKET=reinvent2013-blog-demo
+
+aws s3 sync . s3://$BUCKET \
+  --exclude '*' --include '*.js' --include '*.html' --include '*.css' --include '*.png' \
+  --region us-east-1 --acl public-read
