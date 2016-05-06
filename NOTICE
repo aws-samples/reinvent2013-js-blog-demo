@@ -1,0 +1,16 @@
+Demo blogging application using the AWS SDK for JavaScript in the browser
+Copyright 2013 Amazon.com, Inc. or its affiliates. All Rights Reserved. 
+
+* wmd-buttons.png
+   https://code.google.com/archive/p/wmd-new/
+   Original WMD and Showdwon code copyright (c) 2007 John Fraser
+   Modifications and bugfixes (c) 2009 Dana Robinson
+   Licensed under the MIT License
+
+* js/Markdown.*.js
+   https://code.google.com/archive/p/pagedown/
+   Original Markdown Copyright (c) 2004-2005 John Gruber
+   Original Showdown code copyright (c) 2007 John Fraser
+   Modifications and bugfixes (c) 2009 Dana Robinson
+   Modifications and bugfixes (c) 2009-2014 Stack Exchange Inc. 
+   Licensed under the MIT License
